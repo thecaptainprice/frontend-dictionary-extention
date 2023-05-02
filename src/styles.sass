@@ -1,1 +1,175 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
+@import src/assets/styles/bootstrap-grid
+@import src/assets/styles/variables
+@import src/assets/styles/animations
+@import src/assets/styles/input
+@import src/assets/styles/button
+
+*
+  box-sizing: border-box
+
+html, body
+  background: #fff
+  height: 656px
+  width: 423px
+
+body
+  color: var(--text-primary)
+  font-family: 'Poppins', sans-serif
+  font-size: 18px
+  margin: 0
+  overflow: hidden !important
+
+::-webkit-scrollbar 
+  width: 5px
+  height: 5px
+
+/* Track */
+::-webkit-scrollbar-track 
+  background: var(--primary-light)
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+  background: var(--primary)
+
+::-webkit-scrollbar-thumb:horizontal
+  background: var(--primary)
+  border-radius: 10px
+    
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+  background: var(--primary)
+  border-radius: 12px
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+img
+  font-size: 10px
+
+.font-size-12
+  font-size: var(--font-size-12)
+  margin: 0
+  
+.font-size-14
+  font-size: var(--font-size-14)
+
+.font-weight-normal
+  font-weight: normal
+  
+.w-100
+  width:100%
+
+.h-100
+  height:100%
+
+.lightest-text
+  color: var(--lightest)
+
+.darkest-text
+  color: var(--darkest)
+
+.primary-text
+  color: var(--primary)
+
+.danger-text
+  color: var(--danger-color)
+
+.success-text
+  color: var(--success-color)
+
+.warning-text
+  color: var(--warning-color)
+
+.gray-color
+  color: var(--gray-500)
+
+.position-absolute
+  position: absolute
+
+.position-fixed
+  position: fixed
+
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
+.cursor-pointer
+  cursor: pointer
+
+.word-break-word-break-break-all
+  word-break: word-break-break-all
+  overflow-wrap: anywhere
+
+.white-space-normal
+  white-space: normal
+
+.word-break-word-break-keep-all
+  word-break: word-break-keep-all
+
+.no-wrap
+  white-space: no-wrap
+
+.dash-section
+  padding: 18px 0
+
+  > header
+    margin-bottom: 24px
+
+    h1
+      font-size: 18px
+      font-weight: var(--fw-900)
+      white-space: pre-line
+
+    p
+      color: var(--gray-600)
+      font-weight: var(--fw-400)
+      font-size: 16px
+      margin-top: 8px
+
+    a
+      color: var(--primary)
+      cursor: pointer
+
+.message-area
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 32px
+  text-align: center
+
+  > svg-icon
+    color: var(--gray-500)
+    font-size: 32px
+
+  > p
+    color: var(--gray-700)
+    margin: 8px 0 0
+      
+.product-notice
+  align-items: center
+  color: var(--gray-900)
+  display: flex
+  justify-content: center
+
+  svg-icon
+    font-size: 24px
+    margin-inline-end: 8px
+
+.text-overflow-elilips
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.max-width-500
+  max-width: 500px
+
+modal-wrapper.dark-modal
+  background: #0008
