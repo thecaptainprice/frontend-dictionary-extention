@@ -10,13 +10,16 @@
   box-sizing: border-box
 
 html, body
-  min-height: 100vh
+  background: #fff
+  height: 656px
+  width: 423px
 
 body
   color: var(--text-primary)
   font-family: 'Poppins', sans-serif
   font-size: 18px
   margin: 0
+  overflow: hidden !important
 
 ::-webkit-scrollbar 
   width: 5px
@@ -24,19 +27,20 @@ body
 
 /* Track */
 ::-webkit-scrollbar-track 
-  background: #f1f1f1
+  background: var(--primary-light)
 
 /* Handle */
 ::-webkit-scrollbar-thumb 
-  background: #888
+  background: var(--primary)
 
 ::-webkit-scrollbar-thumb:horizontal
-  background: #888
+  background: var(--primary)
   border-radius: 10px
     
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover 
-  background: #555
+  background: var(--primary)
+  border-radius: 12px
 
 h1, h2, h3, h4, h5, h6, p
   margin: 0

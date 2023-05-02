@@ -31,6 +31,7 @@ i-button
       opacity: .2
 
   &:active
+    color: var(--primary)
     &::before
       opacity: .5 !important
 
@@ -38,6 +39,7 @@ i-button
       transform: scale(.95)
 
   &:focus
+    color: var(--primary)
     // outline: solid 2px var(--color, currentColor)
 
   &.primary
@@ -63,7 +65,7 @@ i-button
     outline-width: 1px
 
     &:hover::before
-      background: #000
+      background: var(--primary)
       opacity: .1
 
   &.primary, &.danger, &.success
@@ -86,7 +88,7 @@ i-button
       opacity: .2 !important
 
     &::before
-      background: currentColor
+      // background: currentColor
 
   &::before
     background: currentColor
