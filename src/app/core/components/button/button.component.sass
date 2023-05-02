@@ -3,14 +3,16 @@ $icon-margin: 10px
 i-button
   align-items: center
   border: solid 1px transparent
-  border-radius: var(--radius)
+  border-radius: var(--radius-4)
   cursor: pointer
   color: var(--color, var(--gray-900))
   display: inline-flex
   isolation: isolate
   line-height: 1em
   outline: none
-  outline-color: var(--color)
+  min-height: 32px
+  min-width: 32px
+  // outline-color: var(--color)
   padding: var(--padding, 10px 16px)
   position: relative
   transition: all .3s ease, outline 0s
@@ -36,7 +38,7 @@ i-button
       transform: scale(.95)
 
   &:focus
-    outline: solid 2px var(--color, currentColor)
+    // outline: solid 2px var(--color, currentColor)
 
   &.primary
     --color: var(--primary)
