@@ -1,0 +1,111 @@
+$icon-margin: 10px
+
+i-button
+  align-items: center
+  border: solid 1px transparent
+  border-radius: var(--radius)
+  cursor: pointer
+  color: var(--color, var(--gray-900))
+  display: inline-flex
+  isolation: isolate
+  line-height: 1em
+  outline: none
+  outline-color: var(--color)
+  padding: var(--padding, 10px 16px)
+  position: relative
+  transition: all .3s ease, outline 0s
+  user-select: none
+
+  &[disabled="true"]
+    --color: var(--gray-400) !important
+    color: var(--color)
+    pointer-events: none
+
+  &[spinning="true"]
+    pointer-events: none
+
+  &:hover
+    &::before
+      opacity: .2
+
+  &:active
+    &::before
+      opacity: .5 !important
+
+    svg-icon, span
+      transform: scale(.95)
+
+  &:focus
+    outline: solid 2px var(--color, currentColor)
+
+  &.primary
+    --color: var(--primary)
+
+  &.danger
+    --color: var(--danger-color)
+
+  &.success
+    --color: var(--success-color)
+
+  &.warning
+    --color: var(--warning-color)
+
+  &.neutral
+    --color: var(--gray-700)
+    background: var(--gray-200)
+
+  &.primary, &.danger, &.success, &.warning
+    background: var(--color)
+    outline-color: currentColor
+    outline-offset: -4px
+    outline-width: 1px
+
+    &:hover::before
+      background: #000
+      opacity: .1
+
+  &.primary, &.danger, &.success
+    color: var(--gray-100)
+
+  &.warning
+    color: var(--gray-900)
+
+  &.outline
+    background: none
+    border-color: var(--color, currentColor)
+    color: var(--color, currentColor)
+    outline-offset: 0
+
+    &:hover::before
+      background: var(--color, currentColor)
+      opacity: .1 !important
+
+    &:active::before
+      opacity: .2 !important
+
+    &::before
+      background: currentColor
+
+  &::before
+    background: currentColor
+    border-radius: inherit
+    content: ''
+    display: block
+    inset: 0
+    opacity: 0
+    position: absolute
+    transition: all .3s ease
+    z-index: -1
+
+  > *
+    pointer-events: none
+
+  > svg-icon
+    &:first-child
+      margin-inline-end: $icon-margin
+
+    &:last-child
+      margin-inline-start: $icon-margin
+
+    &:only-child
+      margin: 0 -4px
