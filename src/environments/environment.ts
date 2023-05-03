@@ -4,13 +4,15 @@
 
 export const environment = {
   firebase: {
-    projectId: 'learno-59753',
-    appId: '1:231608025212:web:b98459a41f690c35b249f9',
-    storageBucket: 'learno-59753.appspot.com',
-    apiKey: 'AIzaSyBBBmprkespmHRHcAeHoIWpUJRMWNacR1U',
-    authDomain: 'learno-59753.firebaseapp.com',
-    messagingSenderId: '231608025212',
-    measurementId: 'G-RBE9XG5NCY',
+    projectId: 'iris-dictionary',
+    appId: '1:637436765499:web:be596274af5c455c4fc31e',
+    databaseURL: 'https://iris-dictionary-default-rtdb.firebaseio.com',
+    storageBucket: 'iris-dictionary.appspot.com',
+    locationId: 'us-central',
+    apiKey: 'AIzaSyBEwcMkqdzsO3xjKslMw1Enac13eWQABi4',
+    authDomain: 'iris-dictionary.firebaseapp.com',
+    messagingSenderId: '637436765499',
+    measurementId: 'G-00SPWJ5SWP',
   },
   production: false
 };

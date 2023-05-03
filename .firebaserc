@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "iris-dictionary": {
+      "hosting": {
+        "frontend-dictionary": [
+          "iris-dictionary"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "iris-dictionary"
+  }
+}
