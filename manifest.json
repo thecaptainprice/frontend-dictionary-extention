@@ -29,7 +29,7 @@
   "content_scripts": [
     {
       "matches": ["https://example.com/*"],
-      "css": ["styles.css"],
+      "css": ["styles.7ed14223e3f768f0.css"],
       "js": ["content-script.js"],
       "all_frames": true
     }
