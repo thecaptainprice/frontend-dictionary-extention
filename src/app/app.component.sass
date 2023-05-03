@@ -1,7 +1,32 @@
 :host
   display: flex
   flex-direction: column
-  height: 656px
+  height: auto
   background: #ffffff
   border: 1px solid #E6E6E6
   box-shadow: 0px 6px 12px 8px rgba(0, 0, 0, 0.15)
+  .body
+    overflow-y: auto
+    overflow-x: hidden
+    min-height: 477px
+
+    ::-webkit-scrollbar 
+      width: 5px
+      height: 5px
+
+    /* Track */
+    ::-webkit-scrollbar-track 
+      background: var(--primary-light)
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb 
+      background: var(--primary)
+
+    ::-webkit-scrollbar-thumb:horizontal
+      background: var(--primary)
+      border-radius: 10px
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover 
+      background: var(--primary)
+      border-radius: 12px
