@@ -1,20 +1,28 @@
-button
-  all: unset
+button ,input.primary,input[type=button]
   align-items: center
+  all: unset
   background: var(--primary)
   border-radius: 12px
-  border: 1px solid #00b13b00
-  color: var(--text-primary)
+  border: 1px solid var(--primary-dark)
+  color: var(--lightest)
   cursor: pointer
   display: inline-flex
   gap:8px
   justify-content: center
   outline: none
   padding: 8px 24px 8px 24px
+  min-width: 150px
+  width: fit-content
+  height: 28px
+
 .outline
-  background: white
-  border-color: var(--primary)
-  color: var(--text-primary)
+  background: white !important
+  border-color: var(--primary) !important
+  color: var(--primary) !important
+
+  svg-icon
+    font-size: 2rem
+
   icon
     display: inline-flex
     height: 1.5em
@@ -22,6 +30,7 @@ button
     min-height: 1.5em
     min-width: 1.5em
     width: 1.5em
+    
 button[disabled]
   background: var(--gray-300)
   pointer-events: none
