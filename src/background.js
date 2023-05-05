@@ -6,7 +6,7 @@
 //
 // Guide for background pages: https://developer.chrome.com/extensions/background_pages
 
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(function () {
   // // @TODO Arbitrary task on installed - try opening a new tab here (for signup)
   // chrome.storage.sync.set({
   //   color: '#3aa757'
@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener(function() {
   // });
 
   // Set rules for when popup should show
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({
         pageUrl: {
@@ -51,7 +51,7 @@ chrome.runtime.onInstalled.addListener(function() {
 
 });
 
-chrome.alarms.onAlarm.addListener((...args: any[]) => {
+chrome.alarms.onAlarm.addListener((...args) => {
   console.warn('Found chrome alarm! >>> ', args);
   // chrome.browserAction.setBadgeText({text: ''});
   // chrome.notifications.create({
@@ -63,4 +63,12 @@ chrome.alarms.onAlarm.addListener((...args: any[]) => {
   //       {title: 'Keep it Flowing.'}
   //     ],
   //     priority: 0});
+});
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.message === 'closeExtension') {
+    chrome.tabs.getCurrent(function (tab) {
+      chrome.tabs.remove(tab.id);
+    });
+  }
 });

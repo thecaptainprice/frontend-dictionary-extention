@@ -1,4 +1,8 @@
-<i-button>
+<i-button
+  routerLinkActive="active"
+  ariaCurrentWhenActive="page"
+  (click)="switchAddWord()"
+>
   <svg-icon class="bottom-nav-bottun" name="plus"></svg-icon>
   <span>Add word</span>
 </i-button>
@@ -12,8 +16,14 @@
   <svg-icon class="bottom-nav-bottun" name="dictionary"></svg-icon>
   <span>Dictionary</span>
 </i-button>
-
-<i-button>
-  <svg-icon class="bottom-nav-bottun" name="user"></svg-icon>
-  <span>Account</span>
-</i-button>
+<a
+  routerLink="/login"
+  routerLinkActive="active"
+  ariaCurrentWhenActive="page"
+  (click)="switchAccount()"
+>
+  <i-button>
+    <svg-icon class="bottom-nav-bottun" name="user"></svg-icon>
+    <span>Account</span>
+  </i-button>
+</a>

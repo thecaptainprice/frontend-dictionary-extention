@@ -1,26 +1,32 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { ButtonComponent } from './components/button/button.component';
-import { IconModule } from './icon/icon.module';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
-import { AboutComponent } from './pages/about/about.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { SvgIconComponent } from './icon/component/svg-icon/svg-icon.component';
+import { IconModule } from './icon/icon.module';
+import { AddWordComponent } from './pages/add-word/add-word.component';
+import { FormControlComponent } from './components/form-control/form-control.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     ToolbarComponent,
     BottomNavComponent,
-    AboutComponent,
+    AddWordComponent,
+    FormControlComponent,
   ],
-  imports: [CommonModule, IconModule],
+  imports: [CommonModule, IconModule, ReactiveFormsModule],
   exports: [
     ButtonComponent,
     IconModule,
     ToolbarComponent,
     BottomNavComponent,
-    AboutComponent,
+    AddWordComponent,
+    SvgIconComponent,
+    FormControlComponent,
   ],
 })
 export class CoreModule {}

@@ -1,1 +1,83 @@
-<p>login works!</p>
+<header>
+  <p class="title">Sign In</p>
+  <p class="description">
+    You can login with your username and password or google account.
+  </p>
+</header>
+
+<form [formGroup]="authForm">
+  <form-control name="Email">
+    <input formControlName="email" type="email" />
+  </form-control>
+  <form-control name="Password">
+    <input formControlName="password" type="password" />
+  </form-control>
+  <button type="button" class="primary">Login</button>
+  <button (click)="authService.GoogleAuth()" class="outline">
+    <svg-icon name="google"></svg-icon>Google
+  </button>
+</form>
+
+<!-- <header>
+  <p class="title">Sign In</p>
+  <p class="description">
+    You can login with your username and password or google account.
+  </p>
+</header>
+<main>
+  <form-control>
+    <input
+      type="text"
+      class="formControl"
+      placeholder="Username"
+      #userName
+      required
+    />
+  </form-control>
+
+  <form-control>
+    <input
+      type="password"
+      class="formControl"
+      placeholder="Password"
+      #userPassword
+      required
+    />
+  </form-control>
+
+  <div class="">
+    <input
+      type="button"
+      class="primary"
+      value="Log in"
+      (click)="authService.SignIn(userName.value, userPassword.value)"
+    />
+  </div>
+
+  <div class="formGroup">
+    <span class="or"><span class="orInner">Or</span></span>
+  </div>
+
+  <div class="formGroup">
+    <button
+      type="button"
+      class="btn googleBtn"
+      (click)="authService.GoogleAuth()"
+    >
+      <i class="fab fa-google-plus-g"></i>
+      Log in with Google
+    </button>
+  </div>
+
+  <div class="forgotPassword">
+    <span routerLink="/forgot-password">Forgot Password?</span>
+  </div>
+
+  <div class="redirectToLogin">
+    <span
+      >Don't have an account?<span class="redirect" routerLink="/register-user">
+        Sign Up</span
+      ></span
+    >
+  </div>
+</main> -->

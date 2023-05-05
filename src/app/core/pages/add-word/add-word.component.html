@@ -1,0 +1,15 @@
+<header>
+  <p class="title">Add New IRIS Dictionary</p>
+  <p class="description">Add your new word to your favorite Leitner box.</p>
+</header>
+<main></main>
+<footer></footer>
+
+<form-control [control]="email" name="Email" target="email">
+  <input
+    [formControl]="email"
+    (click)="$event.stopPropagation()"
+    type="text"
+    id="email"
+  />
+</form-control>
